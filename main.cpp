@@ -1,15 +1,16 @@
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 int main() {
-    int num;
-    std::cout << "请输入一个整数：";
-    std::cin >> num;
-    if (num > 0) {
-        std::cout << num << "是正数。" << std::endl;
-    } else if (num < 0) {
-        std::cout << num << "是负数。" << std::endl;
-    } else {
-        std::cout << num << "是零。" << std::endl;
+    cv::Mat image(500, 500, CV_8UC3, cv::Scalar(255, 255, 255));
+
+    if (image.empty()) {
+        std::cerr << "Error: Could not create the image." << std::endl;
+        return -1;
     }
+
+    cv::imshow("Blank Image", image);
+    cv::waitKey(0);
+
     return 0;
 }
