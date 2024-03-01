@@ -4,9 +4,9 @@ project(cpp_template)  # 项目名称
 # 设置C++标准
 set(CMAKE_CXX_STANDARD 11)
 
-# opencv路径
-find_package(OpenCV REQUIRED)
-include_directories(${OpenCV_INCLUDE_DIRS})
+# 配置外部包路径，例如opencv
+# find_package(OpenCV REQUIRED)
+# include_directories(${OpenCV_INCLUDE_DIRS})
 
 # 添加当前根目录下include文件夹到头文件搜索路径
 include_directories(${PROJECT_SOURCE_DIR}/include)
@@ -29,5 +29,5 @@ add_executable(cpp_template ${SRC_LIST} main.cpp)
 # 生成静态库
 # add_library(cpp_template STATIC ${SRC_LIST})
 
-# 链接opencv库
-target_link_libraries(cpp_template PRIVATE ${OpenCV_LIBRARIES})
+# 链接库，例如opencv
+# target_link_libraries(cpp_template PRIVATE ${OpenCV_LIBRARIES})

@@ -5,10 +5,10 @@
             "name": "C++ Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/cpp_template", // 你的可执行文件的路径
-            "args": [], // 程序运行时的命令行参数
+            "program": "${workspaceFolder}/bin/cpp_template",
+            "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}", // 当前工作目录
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -19,7 +19,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "CMake Build", // 在调试前运行CMake构建任务
+            "preLaunchTask": "CMake Build",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
